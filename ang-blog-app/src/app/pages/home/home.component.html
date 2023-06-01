@@ -1,0 +1,31 @@
+
+<section class="featured-section">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h2 class="text-white mt-3">Featured Posts</h2>
+                <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. At, cumque?</p>
+            </div>
+        </div>
+        <div class="row" >
+            <div class="col-lg-3" *ngFor="let featuredItem of featuredPostArray">
+                <app-post-card *ngIf="featuredItem" [postData]="featuredItem"> 
+                </app-post-card>
+            </div>
+           
+        </div>
+    </div>
+</section>
+
+<section class="container mt-5">
+<div class="col-md-12 text-center">
+    <h2>Latest Post</h2>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos, maxime.</p>
+</div>
+<div class="row">
+    <div class="col-md-4 mt-3" *ngFor="let latestPost of latesPostArray">
+        <app-post-card [postData]="latestPost"></app-post-card>
+    </div>
+    
+</div>
+</section>

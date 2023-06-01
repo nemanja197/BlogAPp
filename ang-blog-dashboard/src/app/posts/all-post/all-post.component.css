@@ -1,0 +1,26 @@
+.ml-2{
+    margin-left: 15px;
+}
+.bg-theme{
+    background-color: var(--primary-color);
+    color:white;
+}
+.primary{
+    color:var(--primary-color)
+}
+.img{
+    max-height: 150px;
+    max-width: 250px;
+
+}
+.max-width{
+    max-width: 250px;
+    min-width: 100px;
+
+}
+.min-width{
+    max-width: 70px;
+}
+.ml-3{
+    margin-left: 15px;
+}

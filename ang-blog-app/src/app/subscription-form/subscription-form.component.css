@@ -1,0 +1,13 @@
+.card {
+  background-color: var(--secondary-color);
+  border: none;
+  max-width: 1200px;
+}
+
+
+.sub-text{
+    width: 500px;
+}
+.mr-3{
+  margin-right: 10px;
+}

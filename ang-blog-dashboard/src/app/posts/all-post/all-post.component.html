@@ -1,0 +1,71 @@
+<div class="container">
+  <div class="row mb-5">
+    <div class="col-md-12">
+      <div class="card shadow-effect bg-secondary-theme">
+        <div class="card-body text-center">
+          <h3 class="text-theme-center primary">All Blog Posts</h3>
+          <p>From here you can manage your blog posts.</p>
+          <button class="btn btn-info bg-theme" routerLink="/posts/new">
+            Add New Post
+          </button>
+          <button class="btn btn-warning ml-2" routerLink="/">
+            Back To Dashboard
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card shadow-effect">
+        <div class="card-body">
+          <table class="table row-border hover">
+            <thead>
+              <tr>
+                <th>No</th>
+                <th>Post Image</th>
+                <th>Title</th>
+               <!-- <th>Excerpt</th>-->
+                <th>Category</th>
+                <th>Date</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr *ngFor="let post of postArray; let i = index">
+                <th class="min-width">{{ i + 1 }}</th>
+                <th class="max-width">
+                  <img
+                    src="{{ post.postImgPath }}"
+                    alt=""
+                    class="img img-fulid"
+                  />
+                </th>
+                <th class="max-width">{{ post.title }}</th>
+              <!--  <th class="max-width">{{ post.excerpt }}</th>-->
+                <th>{{ post.category.category }}</th>
+                <th>{{ post.createdAt["toMillis"]() | date }}</th>
+                <th>
+                  <button class="btn btn-sm  btn-warning" routerLink="/posts/new"[queryParams]="{id:post.id}">
+                    Edit
+                  </button>
+                  <button class="btn btn-sm  btn-danger ml-3" (click)="onDelete(post.postImgPath,post.id)">
+                    Delete
+                  </button>
+                  <button *ngIf="!post.isFeatured" class="btn btn-sm  btn-success ml-3" (click)="onFetured(post.id,true)">
+                    Mark Featured
+                  </button>
+                  <button *ngIf="post.isFeatured" class="btn btn-sm  btn-info ml-3" (click)="onFetured(post.id,false)">
+                    Remove Featured
+                  </button>
+                </th>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

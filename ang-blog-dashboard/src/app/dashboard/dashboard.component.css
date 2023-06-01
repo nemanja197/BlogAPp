@@ -1,0 +1,7 @@
+.card{
+    height: 200px;
+    cursor: pointer;
+}
+.primary{
+    color: var(--primary-color)!important;
+}

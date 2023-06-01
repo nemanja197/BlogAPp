@@ -1,0 +1,12 @@
+.card{
+    max-width: 400px;
+    min-height: 440px;
+    border: none;
+}
+.ml-3{
+    margin-left: 10px;
+}
+img{
+    
+    max-height: 230px;
+}

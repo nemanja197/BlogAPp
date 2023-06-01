@@ -1,0 +1,13 @@
+
+
+
+.bg-theme{
+    background-color: var(--primary-color);
+    color: white;
+}
+.ml-3{
+    margin-left: 15px;
+}
+.img-size{
+    height: 250px;
+}
